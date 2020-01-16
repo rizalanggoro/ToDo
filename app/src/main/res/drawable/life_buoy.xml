@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 12 2 C 17.5228474983 2 22 6.47715250169 22 12 C 22 17.5228474983 17.5228474983 22 12 22 C 6.47715250169 22 2 17.5228474983 2 12 C 2 6.47715250169 6.47715250169 2 12 2 Z" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 12 8 C 14.2091389993 8 16 9.79086100068 16 12 C 16 14.2091389993 14.2091389993 16 12 16 C 9.79086100068 16 8 14.2091389993 8 12 C 8 9.79086100068 9.79086100068 8 12 8 Z" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 4.93 4.93 L 9.17 9.17" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 14.83 14.83 L 19.07 19.07" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 14.83 9.17 L 19.07 4.93" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 14.83 9.17 L 18.36 5.64" />
+    <path
+        android:strokeLineJoin="round" android:strokeWidth="2" android:fillColor="#00000000" android:strokeColor="#fff" android:strokeLineCap="round"
+        android:pathData="M 4.93 19.07 L 9.17 14.83" />
+</vector>

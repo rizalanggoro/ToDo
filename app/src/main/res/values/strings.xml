@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">To-Do</string>
+
+    <string name="add_new_task">Add New Task</string>
+    <string name="add_sub_task">Add Sub Task</string>
+    <string name="home">Home</string>
+    <string name="calendar">Calendar</string>
+    <string name="setting">Settings</string>
+    <string name="dont_have_task">Don\'t Have Task</string>
+    <string name="sub_dont_have_task">You can add the task first and we will \n remind you</string>
+    <string name="upcoming_task">Upcoming Task</string>
+    <string name="today_task">Today Task</string>
+    <string name="my_task">My Task</string>
+    <string name="all_task">All Task</string>
+    <string name="personal_task">Personal Task</string>
+    <string name="work_task">Work Task</string>
+    <string name="task_count">%count% Task</string>
+    <string name="your_title_task">Your title task...</string>
+    <string name="add_some_details">Add some details</string>
+    <string name="date_task">Date Task</string>
+    <string name="category_task">Category Task</string>
+    <string name="subject_task">Subject Task</string>
+    <string name="pick_a_icon">Pick Icon</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="sub_task">Sub Task</string>
+    <string name="mark_done">Mark Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="select_date">Select Date</string>
+    <string name="no_category">No Category</string>
+
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+</resources>

@@ -1,0 +1,4 @@
+Sun 2020, 12 Jan
+- create test activity ==> 14.04
+- create add sub task ==> done / 14.44
+- add task activity --> create sub task / 14.52

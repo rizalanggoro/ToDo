@@ -1,0 +1,6 @@
+settings
+- dark theme
+- transparent status bar, navigation bar ==> true - false
+- category task max grid ==> 2 - 5
+- calendar max showed card day ==> 5 - 7
+- my task menu, close when clicked ==> false - true

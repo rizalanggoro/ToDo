@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="aws_green">#14b5ba</color>
+    <color name="aws_green_2">#53D1B6</color>
+    <color name="aws_white">#e8feff</color>
+    <color name="aws_orange">#faad39</color>
+    <color name="aws_blue">#ff4092FF</color>
+    <color name="aws_background">#F8F9FF</color>
+</resources>
