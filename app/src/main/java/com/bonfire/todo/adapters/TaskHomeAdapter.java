@@ -21,7 +21,10 @@ import com.bonfire.todo.utils.Color;
 import com.bonfire.todo.utils.FeatherIcon;
 import com.bonfire.todo.utils.Font;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -64,29 +67,28 @@ public class TaskHomeAdapter extends RecyclerView.Adapter {
   public class Holder extends RecyclerView.ViewHolder {
     @BindView(R.id.tv_title)
     TextView textViewTitle;
-    @BindView(R.id.tv_subtitle)
-    TextView textViewSubtitle;
     @BindView(R.id.tv_date)
     TextView textViewDate;
     @BindView(R.id.tv_time)
     TextView textViewTime;
-    @BindView(R.id.tv_subject)
-    TextView textViewSubject;
 
     @BindView(R.id.img_calendar)
     ImageView imageViewCalendar;
-    @BindView(R.id.img_subject_color)
-    ImageView imageViewSubjectColor;
     @BindView(R.id.img_icon)
     ImageView imageViewIcon;
     @BindView(R.id.img_background_icon)
     ImageView imageViewBackgroundIcon;
+
+    private Calendar calendar;
+    private SimpleDateFormat simpleDateFormat;
+    private String dateFormat = "MMMM dd yyyy";
 
     public Holder(@NonNull View itemView) {
       super(itemView);
 
       ButterKnife.bind(this, itemView);
       this.a();
+      this.b();
     }
 
     @SuppressLint("ResourceType")
@@ -95,29 +97,31 @@ public class TaskHomeAdapter extends RecyclerView.Adapter {
       Font.setBoldStyle(this.textViewTitle);
 
       String awsGreen = activity.getString(R.color.aws_green);
-      String detailTextColor = "400";
+      String detailTextColor = "600";
 
       this.textViewTitle.setTextColor(Color.blueGrey("900"));
-      this.textViewSubtitle.setTextColor(Color.blueGrey("700"));
       this.textViewDate.setTextColor(Color.blueGrey(detailTextColor));
       this.textViewTime.setTextColor(Color.blueGrey(detailTextColor));
-      this.textViewSubject.setTextColor(Color.blueGrey(detailTextColor));
 
       this.imageViewCalendar.setColorFilter(android.graphics.Color.parseColor(awsGreen));
-      this.imageViewSubjectColor.setColorFilter(android.graphics.Color.parseColor(awsGreen));
 
       this.imageViewCalendar.setLayoutParams(new LinearLayout.LayoutParams(
           (int) this.textViewDate.getTextSize(), (int) this.textViewDate.getTextSize()
       ));
+    }
 
-      this.imageViewSubjectColor.setLayoutParams(new LinearLayout.LayoutParams(
-          (int) this.textViewSubject.getTextSize(), (int) this.textViewSubject.getTextSize()
-      ));
+    @SuppressLint("SimpleDateFormat")
+    private void b() {
+      this.calendar = Calendar.getInstance();
+      this.simpleDateFormat = new SimpleDateFormat(this.dateFormat);
     }
 
     private void bind(TaskData data) {
       this.textViewTitle.setText(data.getTaskTitle());
-      this.textViewSubtitle.setText(data.getTaskDescription());
+
+      String longDate = data.getTaskDate();
+      this.calendar.setTime(new Date(Long.parseLong(longDate)));
+      this.textViewDate.setText(this.simpleDateFormat.format(this.calendar.getTime()));
 
       String taskCategoryKey = data.getTaskCategoryKey();
       if (taskCategoryKey.trim().length() > 0) {
@@ -125,6 +129,7 @@ public class TaskHomeAdapter extends RecyclerView.Adapter {
         this.imageViewIcon.setImageResource(featherIcon.getResource(categoryData.getCategoryIcon()));
         this.imageViewIcon.setColorFilter(Integer.parseInt(categoryData.getCategoryIconColor()));
         this.imageViewBackgroundIcon.setColorFilter(Integer.parseInt(categoryData.getCategoryIconBackgroundColor()));
+        this.imageViewBackgroundIcon.setAlpha(0.5f);
       }
     }
   }

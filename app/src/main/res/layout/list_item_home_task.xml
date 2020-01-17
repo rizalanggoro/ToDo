@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:minHeight="56dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -40,28 +41,24 @@
             </FrameLayout>
 
             <LinearLayout
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:singleLine="true"
                     android:id="@+id/tv_title"
-                    android:layout_marginTop="8dp"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                     android:text="Some Title Here!"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/tv_subtitle"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    android:text="Quick description ..."
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
                 <LinearLayout
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="2dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
@@ -75,7 +72,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:layout_marginStart="4dp"
+                        android:layout_marginStart="8dp"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                         android:id="@+id/tv_date"
                         android:text="May 12 2018"
@@ -87,29 +84,6 @@
                         android:id="@+id/tv_time"
                         android:layout_marginStart="8dp"
                         android:text="10.10 PM"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/img_subject_color"
-                        android:src="@drawable/ic_brightness_1_black_24dp"
-                        app:tint="@color/colorPrimary"
-                        android:layout_width="16dp"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:layout_marginStart="4dp"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-                        android:id="@+id/tv_subject"
-                        android:text="Scientist"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>

@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bonfire.todo.AppConfiguration;
 import com.bonfire.todo.MainActivity;
 import com.bonfire.todo.R;
-import com.bonfire.todo.adapters.SampleAdapter;
 import com.bonfire.todo.adapters.TaskHomeAdapter;
 import com.bonfire.todo.databases.TaskDatabase;
 import com.bonfire.todo.datas.TaskData;
@@ -44,8 +42,10 @@ public class FragmentHome extends Fragment {
   private TaskDatabase taskDatabase;
   private AppConfiguration appConfiguration;
 
-  private ArrayList<String> taskKeyArrayList = new ArrayList<>();
-  private ArrayList<TaskData> taskDataArrayList = new ArrayList<>();
+  private ArrayList<String> todayTaskKeyArrayList = new ArrayList<>();
+  private ArrayList<TaskData> todayTaskDataArrayList = new ArrayList<>();
+  private ArrayList<String> incomingTaskKeyArrayList = new ArrayList<>();
+  private ArrayList<TaskData> incomingTaskDataArrayList = new ArrayList<>();
 
   private String currentSelectedTaskCategoryKey = "";
 
@@ -68,8 +68,8 @@ public class FragmentHome extends Fragment {
   private void a() {
     this.taskHomeAdapter = new TaskHomeAdapter(
         getActivity(),
-        this.taskKeyArrayList,
-        this.taskDataArrayList
+        this.todayTaskKeyArrayList,
+        this.todayTaskDataArrayList
     );
     this.taskDatabase = new TaskDatabase(getActivity());
     if (getActivity() != null)
@@ -108,8 +108,8 @@ public class FragmentHome extends Fragment {
     new aiLoadTaskDatabase(
         this.appConfiguration,
         this.taskDatabase,
-        this.taskKeyArrayList,
-        this.taskDataArrayList,
+        this.todayTaskKeyArrayList,
+        this.todayTaskDataArrayList,
         this.taskHomeAdapter
     ).execute();
   }
